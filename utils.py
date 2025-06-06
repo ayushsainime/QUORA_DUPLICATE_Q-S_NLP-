@@ -38,13 +38,13 @@ def download_file_from_google_drive(file_id: str, dest_path: str):
 
 
 # ──────────── 1. Model / Vectorizer Loaders ─────────────────────────────────
-def load_model(model_path="models/model.pkl", file_id="1mSiCIhGM0BE4WlfLiCMHX1FLP-cD1yG1"):
+def load_model(model_path="model.pkl", file_id="1mSiCIhGM0BE4WlfLiCMHX1FLP-cD1yG1"):
     download_file_from_google_drive(file_id, model_path)
     with open(model_path, "rb") as f:
         model = pickle.load(f)
     return model
 
-def load_vectorizer(tfidf_path="models/tfidf.pkl", file_id="1b91v4jfwtPiTCGR0RdjYrvaRgAj9Jybl"):
+def load_vectorizer(tfidf_path="tfidf.pkl", file_id="1b91v4jfwtPiTCGR0RdjYrvaRgAj9Jybl"):
     download_file_from_google_drive(file_id, tfidf_path)
     with open(tfidf_path, "rb") as f:
         tfidf = pickle.load(f)
