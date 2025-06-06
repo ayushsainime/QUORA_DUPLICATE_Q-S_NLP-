@@ -2,13 +2,11 @@ streamlit
 pandas
 numpy
 scikit-learn
-xgboost
 spacy
 nltk
-beautifulsoup4
 contractions
-distance
+beautifulsoup4
 fuzzywuzzy
-python-Levenshtein   # for faster fuzzywuzzy
+python-Levenshtein
 gdown
-os
+distance
