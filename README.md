@@ -6,7 +6,7 @@ A Machine Learning-powered web app to detect if two given questions are duplicat
 
 ## 🚀 Demo
 
-Try it live: *   *
+Try it live: *   https://gscvlubtbxkbetufv4frfy.streamlit.app/ *
 
 
 ![Screenshot 2025-06-07 001746](https://github.com/user-attachments/assets/1cc882aa-ff00-4c99-bc2d-5c498a8c2159)
