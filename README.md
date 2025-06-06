@@ -2,6 +2,10 @@
 
 A Machine Learning-powered web app to detect if two given questions are duplicates, inspired by Quora's question pair challenge.
 
+
+Our model uses a comprehensive set of features including basic text statistics, token overlap features, length-based metrics, fuzzy string matching scores, and TF-IDF vector representations to accurately capture the similarity between question pairs. . 
+
+
 ---
 
 ## 🚀 Demo
@@ -50,6 +54,42 @@ Evaluated on a held-out test set using a Random Forest Classifier trained on ric
 
 - **Name**: Quora Question Pairs Dataset  
 - **Download Link**: [Quora Duplicate Questions Dataset](https://www.kaggle.com/c/quora-question-pairs/data)
+
+## Features Used
+
+The model leverages a comprehensive set of features engineered to capture various aspects of similarity between question pairs. These features include:
+
+### 1. Basic Text Features
+- Character length of each question
+- Word count of each question
+- Number of common words between the two questions
+- Total number of words in both questions combined
+- Word share ratio (common words divided by total words)
+
+### 2. Token-based Features
+- Ratio of common non-stopwords (minimum and maximum denominators)
+- Ratio of common stopwords (minimum and maximum denominators)
+- Ratio of common tokens overall (minimum and maximum denominators)
+- Binary indicators if the first words of both questions are the same
+- Binary indicators if the last words of both questions are the same
+
+### 3. Length-based Features
+- Absolute difference in the number of tokens between the two questions
+- Average length of both questions (in tokens)
+- Longest common substring ratio relative to the smaller question length
+
+### 4. Fuzzy Matching Features
+- Fuzzy ratio (QRatio) between questions
+- Partial fuzzy ratio
+- Token sort ratio
+- Token set ratio
+
+### 5. TF-IDF Features
+- TF-IDF vector representations of questions to capture weighted word importance based on corpus statistics
+
+---
+
+These features help the model effectively identify subtle semantic and lexical similarities, contributing to its overall accuracy in detecting duplicate questions.
 
 
 ## 🏗️ How It Works
