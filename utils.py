@@ -32,7 +32,9 @@ SAFE_DIV = 1e-4
 def download_file_from_google_drive(file_id: str, dest_path: str):
     """Download a file from Google Drive if it doesn't exist locally."""
     if not os.path.exists(dest_path):
-        os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+        dir_name = os.path.dirname(dest_path)
+        if dir_name:  # Only create the directory if it's not empty
+            os.makedirs(dir_name, exist_ok=True)
         url = f"https://drive.google.com/uc?id={file_id}"
         gdown.download(url, dest_path, quiet=False)
 
